@@ -1,24 +1,25 @@
 {
-    "name":"",
-    "cvTitle":"",
-    "cvDescription":"",
+    "name":"Malena Lucero",
+    "cvTitle":"Junior Front-end Developer",
+    "cvDescription":"Junior front-end curretly unemployed",
     "social":[
-        {"name":"", "link":""}
+        {"name":"Twitter", "link":"https://twitter.com/?lang=es"},
+        {"name":"Github", "link":"https://github.com/"}
     ],
     "education":[
-        {"title":"", "institution":"", "endYear":"", "description":""},
-        {"title":"", "institution":"", "endYear":"", "description":""}
+        {"title":"Front-End Developer", "institution":"Ada", "endYear":"2019", "description":"300-hour bootcamp"},
+        {"title":"English-Spanish Translator", "institution":"Lenguas Vivas", "endYear":"2016", "description":"English to Spanish translation"}
     ],
     "skills":[
-        {"title":"", "level":""},
-        {"title":"", "level":""}
+        {"title":"Javascript", "level":"super high"},
+        {"title":"Japanese", "level":"Fluid use of otaku"}
     ],
     "blog":[
-        {"title":"", "sutitle":"", "excerpt":"", "text":"", "images":""},
-        {"title":"", "sutitle":"", "excerpt":"", "text":"", "images":""}
+        {"title":"Japanese is hard", "sutitle":"Japanese is super hard", "excerpt":"Japanese is so hard it makes me wonder what the fuck am I doing with my life", "text":"Japanese is hard, so very hard,so incredibly hard I forget all the words", "images":"IMAGE"},
+        {"title":"Javascript is hard", "sutitle":"Japanese is super hard", "excerpt":"Japanese is so hard it makes me wonder what the fuck am I doing with my life", "text":"Japanese is hard, so very hard,so incredibly hard I forget all the words", "images":"IMAGE"}
     ],
     "contact":{
-        "phone":"",
-        "email":""
+        "phone":"12345678",
+        "email":"myemail@email.com"
     }
 }
