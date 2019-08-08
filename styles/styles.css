@@ -1,0 +1,303 @@
+h1, h2, h3, h4, h5, p, div {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  height: 100vh;
+  margin: 5vh 50px;
+  font-family: "Open Sans", sans-serif;
+  background: linear-gradient(167deg, #0c084c 0%, #096386 52%, #00b7a8 100%);
+  background-repeat: no-repeat;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr;
+  grid-column-gap: 10px;
+  overflow: hidden;
+}
+@media (max-width: 750px) {
+  body {
+    margin: 5vh 0;
+  }
+}
+@media (max-width: 600px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    height: auto;
+    min-height: 100vh;
+    overflow: scroll;
+  }
+}
+body nav.mainMenu {
+  position: relative;
+}
+body nav.mainMenu div.dropdown {
+  display: none;
+  background-color: #096386;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  body nav.mainMenu div.dropdown {
+    display: block;
+  }
+}
+body nav.mainMenu div.dropdown i {
+  color: #0c084c;
+  font-size: 20px;
+  background-color: #096386;
+  padding: 20px;
+}
+body nav.mainMenu a {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+  display: block;
+  margin: 0 0 5px;
+}
+body nav.mainMenu a:hover {
+  background-color: #0c084c;
+}
+@media (max-width: 600px) {
+  body nav.mainMenu a {
+    text-align: center;
+    margin: 0;
+  }
+}
+body nav.mainMenu ul.menu.open {
+  display: block;
+  transform: translate(-100vw);
+}
+@media (max-width: 600px) {
+  body nav.mainMenu ul.menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    right: -100vw;
+  }
+}
+body div.resume {
+  overflow: scroll;
+}
+@media (max-width: 600px) {
+  body div.resume {
+    overflow: auto;
+  }
+}
+body div.personalInfo, body div.resume {
+  background-color: white;
+  padding: 40px;
+  height: 70vh;
+}
+@media (max-width: 750px) {
+  body div.personalInfo, body div.resume {
+    padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  body div.personalInfo, body div.resume {
+    height: auto;
+  }
+}
+body div.personalInfo {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (max-width: 600px) {
+  body div.personalInfo {
+    overflow: auto;
+  }
+}
+body div.personalInfo h1 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+body div.personalInfo h1 span {
+  color: #096386;
+}
+body div.personalInfo p.position {
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+  font-weight: bold;
+  text-align: center;
+}
+body div.personalInfo p.description {
+  padding: 20px 0;
+  text-align: center;
+}
+body div.personalInfo div.email {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+body div.personalInfo div.email:hover {
+  background-color: #0c084c;
+}
+body div.personalInfo nav.socialMediaNav {
+  display: flex;
+  justify-content: center;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia {
+  margin: 20px 0;
+  display: flex;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia li {
+  color: white;
+  margin: 0 5px;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia li a {
+  background-color: #096386;
+  padding: 10px;
+  color: white;
+}
+body div.personalInfo nav.socialMediaNav ul.socialMedia li a:hover {
+  background-color: #0c084c;
+}
+body div.resume h2 {
+  color: #0c084c;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #0c084c;
+}
+body div.resume div.download {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+}
+body div.resume div.download a {
+  background-color: #0c084c;
+  padding: 10px;
+  color: white;
+  text-align: center;
+  margin-right: 20px;
+}
+body div.resume div.download a:hover {
+  background-color: #096386;
+}
+body div.resume div.download a:last-of-type {
+  margin-right: 0;
+}
+body div.resume div.educationBox {
+  margin-top: 20px;
+}
+body div.resume div.subtitle {
+  margin-top: 20px;
+}
+body div.resume div.subtitle h3 {
+  color: #096386;
+  border-left: 5px solid #096386;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+body div.resume div.subtitle i {
+  padding-right: 10px;
+}
+body div.resume div.education {
+  border: 3px double grey;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+body div.resume div.education h4 {
+  padding-bottom: 10px;
+}
+body div.resume div.education h4.degreeTranslation {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0;
+}
+body div.resume div.education h5 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px grey;
+  font-weight: bold;
+  font-style: italic;
+}
+body div.resume div.education p {
+  padding-top: 10px;
+}
+body div.resume div.education ul {
+  margin-top: 20px;
+}
+body div.resume div.education ul span {
+  color: #096386;
+}
+body div.languages div.subtitle {
+  margin-top: 20px;
+}
+body div.languages div.subtitle h3 {
+  color: #096386;
+  border-left: 5px solid #096386;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+body div.languages div.subtitle i {
+  padding-right: 10px;
+}
+body div.languages div.languagesContent {
+  border: 3px double grey;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+body div.languages div.languagesContent h4 {
+  padding-bottom: 10px;
+}
+body div.languages div.languagesContent h4.degreeTranslation {
+  font-weight: normal;
+  font-size: 14px;
+  padding: 0;
+}
+body div.languages div.languagesContent h5 {
+  padding-bottom: 10px;
+  border-bottom: solid 1px grey;
+  font-weight: bold;
+  font-style: italic;
+}
+body div.languages div.languagesContent p {
+  padding-top: 10px;
+}
+body div.languages div.languagesContent ul {
+  margin-top: 20px;
+}
+body div.languages div.languagesContent ul span {
+  color: #096386;
+}
+body div.portfolio ul {
+  margin-top: 20px;
+}
+body div.portfolio ul span {
+  color: #096386;
+}
+body div.portfolio a {
+  text-decoration: none;
+  color: #096386;
+  font-weight: bold;
+}
+body div.portfolio a:hover {
+  color: #0c084c;
+}
+body div.portfolio li {
+  margin-top: 20px;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none !important;
+}
+
+/*# sourceMappingURL=styles.css.map */

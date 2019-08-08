@@ -1,0 +1,280 @@
+$dark-color: #0c084c;
+$main-color: #096386;
+$text-color: grey;
+$padding: 40px;
+$text-padding: 20px;
+$small-text-padding: 10px;
+$medium-break: 750px;
+$small-break: 600px;
+
+h1, h2, h3, h4, h5, p, div{
+    margin: 0;
+}
+
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin simpleButton{
+    text-decoration: none;
+    color: $main-color;
+    font-weight: bold;
+        &:hover{
+            color: $dark-color;
+        }
+}
+
+@mixin button{
+    background-color: $main-color;
+    padding: 10px;
+    color: white;
+        &:hover{
+            background-color: $dark-color;
+        }
+}
+
+@mixin reverseButton{
+    background-color: $dark-color;
+    padding: 10px;
+    color: white;
+        &:hover{
+            background-color: $main-color;
+        }
+}
+
+@mixin subtitle{
+    margin-top: $text-padding;
+    h3{
+        color: $main-color;
+        border-left: 5px solid $main-color;
+        padding-left: 10px;
+        margin-bottom: $text-padding;
+    }
+    i{
+        padding-right: 10px;
+    }
+}
+
+@mixin doubleBorderBox{
+    border: 3px double grey;
+    padding: $text-padding;
+    margin-bottom: $text-padding;
+    h4{
+        padding-bottom: $small-text-padding;
+    }
+    h4.degreeTranslation{
+        font-weight: normal;
+        font-size: 14px;
+        padding: 0;
+    }
+    h5{
+        padding-bottom: $small-text-padding;
+        border-bottom: solid 1px grey;
+        font-weight: bold;
+        font-style: italic;
+    }
+    p{
+        padding-top: $small-text-padding;
+    }
+    @include list()
+}
+
+@mixin list{
+    ul{
+        margin-top: $text-padding;
+        span{
+            color: $main-color;
+        }
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+
+body{
+    height: 100vh;
+    margin: 5vh 50px;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(167deg, rgba(12,8,76,1) 0%, rgba(9,99,134,1) 52%, rgba(0,183,168,1) 100%);
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: 1fr 3fr 3fr;
+    grid-column-gap: 10px;
+    overflow: hidden;
+    @media (max-width: $medium-break){
+        margin: 5vh 0;
+    }
+    @media(max-width: $small-break){
+        display: flex;
+        flex-direction: column;
+        margin: 15px;
+        height: auto;
+        min-height: 100vh;
+        overflow: scroll;
+    }
+    nav.mainMenu{
+        position: relative;
+        div.dropdown{
+            display: none;
+            background-color: $main-color;
+            text-align: center;
+            @media (max-width: $small-break){
+                display: block;
+            }
+            i{
+                color: $dark-color;
+                font-size: 20px;
+                background-color: $main-color;
+                padding: $text-padding;
+            }
+        }
+        a{
+            @include button;
+            display: block;
+            margin: 0 0 5px;
+            @media(max-width: $small-break){
+                text-align: center;
+                margin: 0;
+            }
+        }
+        ul.menu{
+            &.open{
+                display: block;
+                transform: translate(-100vw);
+            }
+           @media(max-width: $small-break){
+            display: none;   
+            position: absolute;
+            width: 100%;
+            top: 50px;
+            right: -100vw;
+            } 
+        }
+        
+    }
+    div.resume{
+        overflow: scroll;
+        @media(max-width: $small-break){
+            overflow: auto;
+        }
+    }
+    div.personalInfo, div.resume{
+        background-color: white;
+        padding: $padding;
+        height: 70vh;
+        @media(max-width: $medium-break){
+            padding: $text-padding;
+        }
+        @media(max-width: $small-break){
+            height: auto;
+        }
+    }
+    div.personalInfo{
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media(max-width: $small-break){
+            overflow: auto;
+        }
+        h1{
+            margin: 0 0 $text-padding;
+            text-align: center;
+            span{
+                color: $main-color;
+            }
+        }
+        p.position{
+            padding-bottom: $text-padding;
+            border-bottom: 1px solid black;
+            font-weight: bold;
+            text-align: center;
+        }
+        p.description{
+            padding: $text-padding 0;
+            text-align: center;
+        }
+        div.email{
+            @include button;
+            width: 100%;
+            text-align: center;
+            border-radius: 10px;
+        }
+        nav.socialMediaNav{
+            display: flex;
+            justify-content: center;
+            ul.socialMedia{
+            margin: $text-padding 0;
+            display: flex;
+                li{
+                    color: white;
+                    margin: 0 5px;
+                    a{
+                        @include button;
+                    }
+                }
+            }
+        }
+    }
+    div.resume{
+        h2{
+            color: $dark-color;
+            padding-bottom: $text-padding;
+            border-bottom: 1px solid $dark-color;
+        }
+        div.download{
+            margin-top: $text-padding;
+            display: flex;
+            flex-direction: row;
+            a{
+                @include reverseButton;
+                text-align: center;
+                margin-right: $text-padding;
+                &:last-of-type{
+                    margin-right: 0;
+                }
+            }
+
+        }
+        div.educationBox{
+            margin-top: $text-padding;
+            
+        }
+        div.subtitle{
+            @include subtitle();
+        }
+        div.education{
+            @include doubleBorderBox();
+        }
+            
+    }
+    div.languages{
+        div.subtitle{
+            @include subtitle();
+        }
+        div.languagesContent{
+            @include doubleBorderBox();
+        }
+    }
+    div.portfolio{
+        @include list;
+        a{
+            @include simpleButton();
+        }
+        li{
+            margin-top: $text-padding;
+        }
+    }
+}
+
+.show{
+    display: block;
+}
+
+.hide{
+    display: none !important;
+}

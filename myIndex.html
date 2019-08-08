@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <script src="myMain.js" type="text/Javascript"></script>
+</head>
+<body>
+    <nav class="mainMenu">
+        <div class="dropdown" id="dropdown" onclick="toggleMenu()">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul id="menu" class="menu">
+            <li><a href="#" onclick="home()">HOME</a></li>
+            <li><a href="#" onclick="education()">EDUCATION</a></li>
+            <li><a href="#" onclick="languages()">LANGUAGES</a></li>
+            <li><a href="#" onclick="portfolio()">PORTFOLIO</a></li>
+            <li><a href="#" onclick="contact()">CONTACT</a></li>
+        </ul>
+    </nav>
+    <!--PERSONAL INFO-->
+    <div class="personalInfo">
+        <img>
+        <h1>I'm <span id="fetchName"></span></h1>
+        <div class="show" id="personalInfo">
+            <p class="position">Front-end developer & Eng-Spa Translator</p>
+            <p class="description">I'm a junior front-end developer located in Buenos Aires, Argentina, looking for chances to grow in the field. I also have a bachellor's degree in English to Spanish translation and I know a bit of Japanese.</p>
+            <nav class="socialMediaNav">
+                <ul class="socialMedia">
+                    <li><a href="https://www.linkedin.com/in/malena-lucero-304316181/"><i class="fab fa-linkedin-in"></i></a></li>
+                    <li><a href="https://github.com/MalenaLucero"><i class="fab fa-github"></i></a></li> 
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--RESUME-->
+    <div class="resume">
+        <h2>RESUME</h2>
+        <div class="download">
+            <a href="resume/Malena Lucero (CV) Front-end Developer - Web.pdf" download>Download in English</a>
+            <a href="resume/Malena Lucero (CV) Desarrolladora front-end - Web.pdf" download>Download in Spanish</a> 
+        </div>
+        <!--EDUCATION-->
+        <div id="education" class="educationBox show">
+            <div class="subtitle">
+                <h3><i class="fas fa-university"></i>Education</h3>
+            </div>
+            <div class="education">
+                <h4>Computer Systems Engineering</h4>
+                <h4 class="degreeTranslation">(Licenciatura en Sistemas de Informacion de las Organizaciones)</h4>
+                <h5>University of Buenos Aires - FCE</h5>
+                <p>Five-year and a half university degree. I'm currently in first year.</p>
+            </div>
+            <div class="education">
+                <h4>English-Spanish Translator</h4>
+                <h4 class="degreeTranslation">(Traductorado Literario y Tecnico-Cientifico en Ingles)</h4>
+                <h5>I.E.S. Lenguas Vivas "Juan Ramon Fernandez"</h5>
+                <p>Four-year and a half bachellor's degree. I graduated in 2016.</p>
+            </div>
+            <div class="education">
+                <h4>Front-end Developer</h4>
+                <h5>Ada</h5>
+                <p>300-hour front-end bootcamp taken in 2019.</p>
+            </div>
+        </div>
+        <!--LANGUAGES-->
+        <div class="languages show" id="languages">
+            <div class="subtitle">
+                <h3><i class="fas fa-language"></i>Languages</h3>
+            </div>
+            <div class="languagesContent">
+                <h4>Programming languages</h4>
+                <h5></h5>
+                <ul>
+                    <li><span>•</span> Javascript</li>
+                    <li><span>•</span> HTML</li>
+                    <li><span>•</span> CSS</li>
+                    <li><span>•</span> SASS</li>
+                </ul>
+            </div>
+            <div class="languagesContent">
+                <h4>Spoken languages</h4>
+                <h5></h5>
+                <ul>
+                    <li><span>•</span> Spanish: native language</li>
+                    <li><span>•</span> English: advanced level (C1)</li>
+                    <li><span>•</span> Japanese: intermediate level (JLPT N2)</li>
+                </ul>
+            </div>
+        </div>
+        <!--PORTFOLIO-->
+        <div class="portfolio show" id="portfolio">
+            <div class="subtitle">
+                <h3><i class="fas fa-address-book"></i>Portfolio</h3>
+            </div>
+            <ul class="portfolioContent">
+                <li>
+                    <p><span>•</span> <a href="https://malenalucero.github.io/PcStore/" class="button">ABM webpage of a PC Store</a></p>
+                    <a href="https://github.com/MalenaLucero/PcStore">View code</a>
+                </li>
+                <li>
+                    <p><span>•</span> <a href="https://malenalucero.github.io/TP2-GracielaFernandaMalena/">To-do list</a></p>
+                    <a href="https://github.com/MalenaLucero/TP2-GracielaFernandaMalena">View code</a>
+                </li>
+                <li>
+                    <p><span>•</span> This personal webpage</p>
+                    <a href="https://github.com/MalenaLucero/resume">View code</a>
+                </li>
+            </ul>
+        </div>
+        <!--CONTACT-->
+        <div class="contact show" id="contact">
+            <div class="subtitle">
+                <h3><i class="fas fa-comments"></i>Contact</h3>
+                <div class="contactContent">
+                    <p>tradmalenalucero@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
