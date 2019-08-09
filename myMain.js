@@ -63,7 +63,26 @@ const toggleMenu = () =>{
 fetch('https://raw.githubusercontent.com/MalenaLucero/fetch/master/cv.json')
     .then(response => response.json())
     .then(res => {
-            let fetchName = document.getElementById('fetchName')
-            fetchName.innerText = res.name
+            innerText('fetchName', res.name)
+            innerText('fetchCvTitle', res.cvTitle)
+            innerText('fetchCvDescription', res.cvDescription)
+            innerTextList('socialMediaContainer', res.social.map(e=>e.name), res.social.map(e=>e.link))
         })
+
+const innerText = (containerId, content) =>{
+    let element = document.getElementById(containerId)
+    element.innerText = content
+}
+
+const innerTextList = (containerId, firstArray, secondArray) =>{
+    let container = document.getElementById(containerId)
+    firstArray.forEach((e, index)=>{
+        let li = document.createElement('li')
+        let a = document.createElement('a')
+        a.href = secondArray[index]
+        a.innerText = e
+        li.appendChild(a)
+        container.appendChild(li)
+    })
+}
 
