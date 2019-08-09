@@ -63,11 +63,18 @@ const toggleMenu = () =>{
 fetch('https://raw.githubusercontent.com/MalenaLucero/fetch/master/cv.json')
     .then(response => response.json())
     .then(res => {
-            innerText('fetchName', res.name)
-            innerText('fetchCvTitle', res.cvTitle)
-            innerText('fetchCvDescription', res.cvDescription)
-            innerTextList('socialMediaContainer', res.social.map(e=>e.name), res.social.map(e=>e.link))
+            personalInformation(res)
+            fetchEducation(res.education)
+            
         })
+
+const personalInformation = (res) =>{
+    innerText('fetchName', res.name)
+    innerText('fetchCvTitle', res.cvTitle)
+    innerText('fetchCvDescription', res.cvDescription)
+    innerText('fetchPhoneMail', `${res.contact.phone} / ${res.contact.email}`)
+    innerTextList('socialMediaContainer', res.social.map(e=>e.name), res.social.map(e=>e.link))
+}
 
 const innerText = (containerId, content) =>{
     let element = document.getElementById(containerId)
@@ -85,4 +92,28 @@ const innerTextList = (containerId, firstArray, secondArray) =>{
         container.appendChild(li)
     })
 }
+
+const fetchEducation = (education) =>{
+    education.forEach(e=>{
+        let container = document.getElementById('education')
+        let div = document.createElement('div')
+        div.classList.add('education')
+        let title = document.createElement('h4')
+        title.innerText = e.title
+        let endYear = document.createElement('h4')
+        endYear.innerText = e.endYear
+        endYear.classList.add('degreeTranslation')
+        let institution = document.createElement('h5')
+        institution.innerText = e.institution
+        let description = document.createElement('p')
+        description.innerText = e.description
+        div.appendChild(title)
+        div.appendChild(endYear)
+        div.appendChild(institution)
+        div.appendChild(description)
+        container.appendChild(div)
+    })
+}
+
+
 
