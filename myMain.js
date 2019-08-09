@@ -63,10 +63,10 @@ const toggleMenu = () =>{
 fetch('https://raw.githubusercontent.com/MalenaLucero/fetch/master/cv.json')
     .then(response => response.json())
     .then(res => {
-            personalInformation(res)
-            fetchEducation(res.education)
-            
-        })
+        personalInformation(res)
+        fetchEducation(res.education)
+        fetchSkills(res.skills)
+    })
 
 const personalInformation = (res) =>{
     innerText('fetchName', res.name)
@@ -113,6 +113,21 @@ const fetchEducation = (education) =>{
         div.appendChild(description)
         container.appendChild(div)
     })
+}
+
+const fetchSkills = (skills) =>{
+    let container = document.getElementById('skills')
+    let smallerContainer = document.createElement('div')
+    smallerContainer.classList.add('languagesContent')
+    skills.forEach(e=>{
+        let h4 = document.createElement('h4')
+        h4.innerText = e.title
+        smallerContainer.appendChild(h4)
+        let h5 = document.createElement('h5')
+        h5.innerText = `Level: ${e.level}`
+        smallerContainer.appendChild(h5)
+    })
+    container.appendChild(smallerContainer)
 }
 
 
